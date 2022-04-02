@@ -1,12 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulador de Credito</title>
+    <link rel="stylesheet" href="./css/main.css">
 </head>
+
 <body>
+    <header class="header">
+        <nav class="nav">
+            <div class="title animate__animated animate__flash">Time of Pay</div>
+            <ul class="menu visible">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./pages/prestamos.html">Prestamos</a></li>
+                <li><a href="./pages/nosotros.html">Nosotros</a></li>
+                <li><a href="./pages/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <Section class="banner">
+        <div class="Simulador">
+            <h1>Simulador de Credito</h1>
+        </div>
+        <div class="form">
+            <form >
+                <div> <label for="nombre">Nombre y Apellido</label>
+                    <input type="text" name="nombre" class="formstyle" placeholder="Ingrese su nombre">
+                </div>
+                <div> <label for="number">Telefono</label>
+                    <input type="number" name="number" class="formstyle" placeholder="Ingrese su numero">
+                </div>
+                <div> <label for="correo">Correo Electronico</label>
+                    <input type="email" name="correo" class="formstyle" placeholder="Ingrese su email">
+                </div>
+                <div> <label for="pedido">Dinero que desea pedir prestado</label>
+                    <input type="number" name="pedido" class="formstyle" placeholder="Ingrese su monto solicitado">
+                </div>
+                <div> <label for="duracion">Tiempo de duracion del prestamo </label>
+                    <select name="select" id="duracion">
+                        <option value="1">24 meses</option>
+                        <option value="2">48 meses</option>
+                        <option value="3">72 meses</option>
+                        <option value="4">96 meses</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+
+    </Section>
+    <footer>
+        <div class="condiciones">
+            <p>El otorgamiento de los créditos se encuentra sujeto al cumplimiento de las condiciones de contratación,
+                verificación comercial y aprobación crediticia por parte de Credil S.R.L., Cuit 30-62221630-9. Calle 15
+                N° 1437 La Plata (C.P. 1900), Provincia de Buenos Aires. Este aviso no es una oferta, ni una invitación
+                de compra o adhesión, no tiene carácter de publicidad en los términos y los alcances establecidos en la
+                Ley N° 24240 (arts. 7 y 8). Las condiciones de contratación pueden ser consultadas en las sucursales de
+                time of pay S.R.L.
+                TIME OF PAY SRL / CUIT 30-62221630-9 / 15 Nº 1437 - LA PLATA</p>
+        </div>
+        <div class="garantia">El mejor préstamo siempre, somos garantia de confianza</div>
+    </footer>
     <script src="./index.js"></script>
 </body>
+
 </html>
