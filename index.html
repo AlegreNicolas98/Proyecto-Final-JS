@@ -39,24 +39,19 @@
         <div class="form">
             <form>
                 <div> <label for="nombre">Nombre y Apellido</label>
-                    <input type="text" name="nombre" class="formstyle" placeholder="Ingrese su nombre">
-                </div>
-                <div> <label for="number">Telefono</label>
-                    <input type="number" name="number" class="formstyle" placeholder="Ingrese su numero">
+                    <input type="text" id="nombre" class="formstyle" placeholder="Ingrese su nombre">
                 </div>
                 <div> <label for="correo">Correo Electronico</label>
-                    <input type="email" name="correo" class="formstyle" placeholder="Ingrese su email">
+                    <input type="email" id="correo" class="formstyle" placeholder="Ingrese su email">
                 </div>
                 <div> <label for="pedido">Dinero que desea pedir prestado</label>
-                    <input type="number" name="pedido" class="formstyle" placeholder="Ingrese su monto solicitado">
+                    <input type="number" id="prestamo" class="formstyle" placeholder="Ingrese su monto solicitado">
                 </div>
                 <div> <label for="duracion">Tiempo de duracion del prestamo </label>
-                    <select name="select" id="duracion">
-                        <option value="1">24 meses</option>
-                        <option value="2">48 meses</option>
-                        <option value="3">72 meses</option>
-                        <option value="4">96 meses</option>
-                    </select>
+                    <input type="number" id="duracion" class="formstyle" placeholder="Ingrese su duracion">
+                </div>
+                <div>
+                    <button id="boton" class="form-boton" type="reset" onclick="capturar();"> Agregar</button>
                 </div>
             </form>
         </div>
