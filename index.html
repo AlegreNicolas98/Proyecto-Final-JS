@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulador de Credito</title>
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
 </head>
 
 <body>
@@ -48,12 +49,24 @@
                     <input type="number" id="prestamo" class="formstyle" placeholder="Ingrese su monto solicitado">
                 </div>
                 <div> <label for="duracion">Tiempo de duracion del prestamo </label>
-                    <input type="number" id="duracion" class="formstyle" placeholder="Ingrese su duracion">
+                    <input type="text" id="duracion" class="formstyle" placeholder="Ingrese su duracion">
                 </div>
                 <div>
                     <button id="boton" class="form-boton" type="reset" onclick="capturar();"> Agregar</button>
                 </div>
             </form>
+        </div>
+        <div>
+            <table class="table table-dark table-striped" id="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">prestamo</th>
+                        <th scope="col">Duracion</th>
+                    </tr>
+                </thead>
+                
+            </table>
         </div>
 
     </Section>
@@ -75,6 +88,10 @@
         <div class="garantia">El mejor préstamo siempre, somos garantia de confianza</div>
     </footer>
     <script src="./index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
 </body>
 
 </html>
