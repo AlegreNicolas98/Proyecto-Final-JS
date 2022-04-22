@@ -1,27 +1,70 @@
+/*------- PRESENTACION --------- */
+
 .contenido{
-    margin-top: 5rem;
-}
-
-.simulador{
-    font-size: 1em;
-    font-style: italic;
-}
-
-.contrato{
-  margin: 2rem;
-  background-color: #d5d5d5 ;
-
-}
-.form{
-    border: double rgb(255, 28, 28);
-    background-color: #0f1626;
-    color: #d5d5d5;
-    text-align: center;
-    margin: 0 6rem;
-    padding: 1rem;
+    display: flex;
     
+    .contrato{
+        display: flex;
+        margin: 2rem;
+        background-color: #d5d5d5 ;
+      ol{
+          margin: 5rem 2rem ;
+         list-style: none;
+          text-align: justify;
+          li{
+              font-style: italic;
+              font-family: $font;
+              padding: 0.5rem;
+          }
+      }
+      }
 }
+
+
+/* -------- SIMULADOR ------ */
+
+.tit_simu{
+    font-family: $font;
+}
+.simulador{
+      text-align: center;
+      width: 60%;
+      margin-left: 20%;
+.form{
+    background-color: #0f1626;
+    border: double  #d5d5d5;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    
+    .subtitulo{
+      font-size: 1em;
+      margin: 0.9375rem;
+    }
 .formstyle{
-    padding-bottom: 0.8rem;
-    font-size: 1em;
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+  
+}}}
+
+/* ------ REQUISITOS ----- */
+.preguntas{
+margin: 10rem 0 2rem 1rem;
+font-family:$font;
+font-weight: 400;
+
+}
+
+/* .requisitos{
+
+} */
+
+/* ------- GARANTIA ---------*/
+.garantia{
+    margin-top: 5rem;
+    text-align: center;
+    font-size: 2em;
+    font-family: $font;
+    font-style: italic;
+    font-weight: 900;
 }

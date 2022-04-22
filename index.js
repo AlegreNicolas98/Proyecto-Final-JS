@@ -1,5 +1,6 @@
-let nombre = prompt ("¿Cual es tu nombre?");
-alert ("Bienvenido " + nombre.toUpperCase() + " a Thora Bank");
+/* let nombre = prompt ("¿Cual es tu nombre?");
+alert ("Bienvenido " + nombre.toUpperCase() + " a Thora Bank"); */
+ 
 
 function capturar () { 
    function clientes (nombre, prestamo, tiempo, correo){

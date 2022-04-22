@@ -1,15 +1,24 @@
 /* ----footer */
 footer{
-    margin-top: 10rem;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-.condiciones{
-font-size: 0.8em;
-}
-
-.garantia{
-    font-size: 1.2em;
-    font-weight: 800;
-    margin-top: 1rem;
+    margin-top: 2rem;
+    background-color: #d5d5d5;
+    .condiciones{
+        display: flex;
+       p{
+        font-size: 0.7em;
+        font-family: 'Courier New', Courier, monospace;
+        margin: 0 1rem;
+        text-align: justify;
+       }} 
+    
+       .credito{
+           padding: 1rem;
+           color: white;
+           background-color: #0F1626;
+        text-align: center;
+        .redes{
+            display: inline;
+            margin: 0 0.5rem;
+        }
+       }
 }

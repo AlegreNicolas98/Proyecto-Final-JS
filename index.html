@@ -6,8 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulador de Credito</title>
+    <link rel="icon" href="./images/icon.jpg">
+    <!-- Links -->
     <link rel="stylesheet" href="./css/main.css">
+    <!-- Frameworks -->
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <!-- Font Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;1,300;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -30,28 +38,50 @@
                 Además, descubre si tu crédito está preautorizado.</p>
         </div>
     </header>
-    <Section class="contenido">
-        <div class="simulador">
-            <h1>Simulador de Credito</h1>
-        </div>
+
+    <!-- PRESETACION -->
+    <section class="contenido">
         <div class="contrato">
             <img src="./images/portada.jpg" alt="">
+            <div>
+                <ol>
+                    <li>Para remodelar o equipar tu casa, emprender un negocio o lo que te propongas. ¡Concretá tu
+                        proyecto con la financiación más conveniente!
+                    </li>
+                    <li> Comenzá a disfrutar de tu préstamo ahora y pagalo en hasta 96 cuotas. </li>
+                    <li> La solicitud es 100% online, y se acredita inmediatamente. Además, definís el monto y el plazo
+                        que más te convenga. </li>
+                    <li> Tenés la posibilidad de cancelarlo anticipadamente cuando quieras, en forma total o parcial.
+                    </li>
+                </ol>
+            </div>
         </div>
+    </section>
+
+
+    <!-- SIMULADOR -->
+
+    <section class="tit_simu">
+        <div>
+            <h1>Simulador de Credito</h1>
+        </div>
+    </section>
+    <Section class="simulador">
         <div class="form">
             <form>
-                <div> <label for="nombre">Nombre y Apellido</label>
+                <div class="subtitulo"> <label for="nombre">Nombre y Apellido</label>
                     <input type="text" id="nombre" class="formstyle" placeholder="Ingrese su nombre">
                 </div>
-                <div> <label for="correo">Correo Electronico</label>
+                <div class="subtitulo"> <label for="correo">Correo Electronico</label>
                     <input type="email" id="correo" class="formstyle" placeholder="Ingrese su email">
                 </div>
-                <div> <label for="pedido">Dinero que desea pedir prestado</label>
+                <div class="subtitulo"> <label for="pedido">Dinero que desea pedir prestado</label>
                     <input type="number" id="prestamo" class="formstyle" placeholder="Ingrese su monto solicitado">
                 </div>
-                <div> <label for="duracion">Tiempo de duracion del prestamo </label>
+                <div class="subtitulo"> <label for="duracion">Tiempo de duracion del prestamo </label>
                     <input type="text" id="duracion" class="formstyle" placeholder="Ingrese su duracion">
                 </div>
-                <div>
+                <div class="subtitulo">
                     <button id="boton" class="form-boton" type="reset" onclick="capturar();"> Agregar</button>
                 </div>
             </form>
@@ -65,14 +95,126 @@
                         <th scope="col">Duracion</th>
                     </tr>
                 </thead>
-                
             </table>
         </div>
-
     </Section>
-    <!------ CONTACTO -->
 
-    <!-- OPINIONES -->
+    <!----- REQUISITOS ------>
+
+    <div class="preguntas">
+        <h2>Preguntas Frecuentes</h2>
+    </div>
+    <section class="requisitos">
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        ¿Cómo es un Préstamo Tradicional?
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Los préstamos tradicionales tienen una tasa de interés fija, entonces
+                        sabés el monto de cada cuota a pagar desde el primer momento cuando recibís el préstamo.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        ¿Qué significa UVA y cómo es un Préstamo UVA?
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Una UVA (Unidad de Valor Adquisitivo) es una unidad de medida que se
+                        actualiza diariamente según el CER (inflación). A diferencia de un préstamo tradicional a tasa
+                        fija, en este tipo de préstamo las cuotas se expresan en UVAs, y el monto de la cuota en pesos a
+                        pagar dependerá del valor de la UVA al momento del vencimiento de la cuota.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        ¿Cómo hago para contratar un préstamo?
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Podés acercarte con tu DNI a cualquiera de nuestras sucursales.
+
+                        Si ya sos cliente, podés contratarlo dentro de nuestros canales digitales, desde donde sea que
+                        estés, en cualquier día de la semana y a cualquier hora que lo desees, ingresando a tu home
+                        banking y seleccionando la opción en el menú principal.
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseFour" aria-expanded="false"
+                            aria-controls="flush-collapseFour">
+                            ¿Cuánto tiempo tengo que esperar para recibir mi préstamo?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">En caso de solicitarlo por sucursal, la acreditación es inmediata.
+                            En el caso de requerir análisis de documentación adicional, puede llegar a tomar como máximo
+                            24hs hábiles.
+
+                            Si ya sos cliente, y solicitás tu préstamo por home banking, la acreditación en tu cuenta es
+                            inmediata.
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseFive" aria-expanded="false"
+                                aria-controls="flush-collapseFive">
+                                ¿Qué requisitos tengo que cumplir para poder contratarlo?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFive" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Los únicos requisitos que tenés que cumplir son:
+
+                                Ser mayor de 18 años
+                                Tener residencia permanente en Argentina
+                                Ser titular de una cuenta en el Banco Itaú, donde podamos depositarte tu préstamo.
+                                En caso de no ser titular de una cuenta en el Banco Itaú, podes solicitarla acá.
+
+                                Recordá que la solicitud del producto se encontrará sujeta a una evaluación crediticia.
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingSix">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseSix" aria-expanded="false"
+                                    aria-controls="flush-collapseSix">
+                                    ¿Puedo contratar un préstamo si no tengo un recibo de sueldo o constancia de
+                                    ingresos?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseSix" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Sí, es posible. Podés contactarnos de modo presencial en
+                                    cualquiera de nuestras sucursales.
+
+                                    Para consultar cuál es tu sucursal más cercana, hace click acá.
+
+                                    Si ya sos cliente, también podés contactarnos las 24hs al 0810-345-4999.
+                                </div>
+                            </div>
+                        </div>
+    </section>
+
+    <!------- GARANTIA -->
+    <section>
+        <div class="garantia">El mejor préstamo siempre, somos garantia de confianza</div>
+    </section>
+
 
     <!------ FOOTER  ------>
     <footer>
@@ -85,7 +227,25 @@
                 time of pay S.R.L.
                 TIME OF PAY SRL / CUIT 30-62221630-9 / 15 Nº 1437 - LA PLATA</p>
         </div>
-        <div class="garantia">El mejor préstamo siempre, somos garantia de confianza</div>
+
+        <div class="credito"> Desarrollado WEB by "Alegre Nicolás"
+            <div class="redes"><a href="https://www.instagram.com/nicoalegre_/"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="16" height="16" fill="white" class="bi bi-instagram" viewBox="0 0 16 16">
+                        <path
+                            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                    </svg></a></div>
+            <div class="redes"><a href="https://www.linkedin.com/in/nicolas-alegre-amilivia/"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-linkedin"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                    </svg></a> </div>
+            <div class="redes"><a href="mailto:nicolasalegre4@gmail.com"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="16" height="16" fill="white" class="bi bi-envelope" viewBox="0 0 16 16">
+                        <path
+                            d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                    </svg></a> </div>
+        </div>
     </footer>
     <script src="./index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
