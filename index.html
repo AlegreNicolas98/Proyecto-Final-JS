@@ -14,6 +14,9 @@
     <!-- Font Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;1,300;1,900&display=swap"
         rel="stylesheet">
 </head>
@@ -22,22 +25,55 @@
 
     <!----- HEADER ----->
     <header class="header">
-        <nav class="nav">
-            <ul class="menu visible">
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./pages/prestamos.html">Prestamos</a></li>
-                <li><a href="./pages/nosotros.html">Nosotros</a></li>
-                <li><a href="./pages/contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-
         <div>
-            <div class="title animate__animated animate__flash">Thora Bank</div>
-            <p class="descripcion">Elige cuánto necesitas y cuándo quieres devolverlo.
-                Conoce cuánto pagarás cada mes por tu Préstamo Personal.
-                Además, descubre si tu crédito está preautorizado.</p>
+            <nav class="nav">
+                <div class="logo animate__animated animate__flash">Thora Bank</div>
+                <ul class="menu visible">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./pages/prestamos.html">Solicita Tu Prestamo</a></li>
+                    <li><a href="./pages/nosotros.html">Por Qué ThoraBank</a></li>
+                    <li><a href="./pages/contacto.html">Testimonios</a></li>
+                </ul>
+            </nav>
         </div>
+        <div>
     </header>
+
+    <section>
+        <div id="carouselExampleInterval" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="3000">
+                    <img src="./images/pesoarg.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Elige cuánto necesitas y cuándo quieres devolverlo.</h5>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="4000">
+                    <img src="./images/dolar.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Conoce cuánto pagarás cada mes por tu Préstamo Personal.</h5>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                    <img src="./images/moneda.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Además, descubre si tu crédito está preautorizado.</h5>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    </section>
 
     <!-- PRESETACION -->
     <section class="contenido">
@@ -91,8 +127,9 @@
                 <thead>
                     <tr>
                         <th scope="col">Nombre</th>
-                        <th scope="col">prestamo</th>
+                        <th scope="col">Prestamo</th>
                         <th scope="col">Duracion</th>
+                        <th scope="col">Devolucion</th>
                     </tr>
                 </thead>
             </table>
@@ -105,111 +142,161 @@
         <h2>Preguntas Frecuentes</h2>
     </div>
     <section class="requisitos">
-        <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion accordion-flush bg-primary w-75" id="accordionFlushExample">
             <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingOne">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                <h2 class="accordion-header " id="flush-headingOne">
+                    <button
+                        class="accordion-button collapsed text-white bg-secondary bg-gradient border border-2 border-dark mb-2 "
+                        type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                        aria-expanded="false" aria-controls="flush-collapseOne">
                         ¿Cómo es un Préstamo Tradicional?
                     </button>
                 </h2>
                 <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
                     data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">Los préstamos tradicionales tienen una tasa de interés fija, entonces
-                        sabés el monto de cada cuota a pagar desde el primer momento cuando recibís el préstamo.</div>
+                    <div class="accordion-body shadow-lg p-3 mb-3 bg-body rounded">Los préstamos tradicionales tienen
+                        una tasa de interés fija, entonces
+                        sabés el monto de cada cuota a pagar desde el primer momento cuando recibís el préstamo.
+                    </div>
                 </div>
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    <button
+                        class="accordion-button collapsed text-white bg-secondary bg-gradient border border-2 border-dark mb-2"
+                        type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
+                        aria-expanded="false" aria-controls="flush-collapseTwo">
                         ¿Qué significa UVA y cómo es un Préstamo UVA?
                     </button>
                 </h2>
                 <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
                     data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">Una UVA (Unidad de Valor Adquisitivo) es una unidad de medida que se
+                    <div class="accordion-body shadow-lg p-3 mb-3 bg-body rounded">Una UVA (Unidad de Valor Adquisitivo)
+                        es una unidad de medida que se
                         actualiza diariamente según el CER (inflación). A diferencia de un préstamo tradicional a tasa
                         fija, en este tipo de préstamo las cuotas se expresan en UVAs, y el monto de la cuota en pesos a
-                        pagar dependerá del valor de la UVA al momento del vencimiento de la cuota.</div>
+                        pagar dependerá del valor de la UVA al momento del vencimiento de la cuota.
+                    </div>
                 </div>
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    <button
+                        class="accordion-button collapsed text-white bg-secondary bg-gradient border border-2 border-dark mb-2"
+                        type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
+                        aria-expanded="false" aria-controls="flush-collapseThree">
                         ¿Cómo hago para contratar un préstamo?
                     </button>
                 </h2>
                 <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
                     data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">Podés acercarte con tu DNI a cualquiera de nuestras sucursales.
-
+                    <div class="accordion-body shadow-lg p-3 mb-3 bg-body rounded">
+                        Podés acercarte con tu DNI a cualquiera de nuestras sucursales.
                         Si ya sos cliente, podés contratarlo dentro de nuestros canales digitales, desde donde sea que
                         estés, en cualquier día de la semana y a cualquier hora que lo desees, ingresando a tu home
                         banking y seleccionando la opción en el menú principal.
                     </div>
                 </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingFour">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseFour" aria-expanded="false"
-                            aria-controls="flush-collapseFour">
-                            ¿Cuánto tiempo tengo que esperar para recibir mi préstamo?
-                        </button>
-                    </h2>
-                    <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
-                        data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">En caso de solicitarlo por sucursal, la acreditación es inmediata.
-                            En el caso de requerir análisis de documentación adicional, puede llegar a tomar como máximo
-                            24hs hábiles.
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFour">
+                    <button
+                        class="accordion-button collapsed text-white bg-secondary bg-gradient border border-2 border-dark mb-2"
+                        type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour"
+                        aria-expanded="false" aria-controls="flush-collapseFour">
+                        ¿Cuánto tiempo tengo que esperar para recibir mi préstamo?
+                    </button>
+                </h2>
+                <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body shadow-lg p-3 mb-3 bg-body rounded">En caso de solicitarlo por sucursal,
+                        la acreditación es inmediata. En el caso de requerir análisis de documentación adicional, puede
+                        llegar a tomar como máximo 24hs hábiles.
 
-                            Si ya sos cliente, y solicitás tu préstamo por home banking, la acreditación en tu cuenta es
-                            inmediata.
-                        </div>
+                        Si ya sos cliente, y solicitás tu préstamo por home banking, la acreditación en tu cuenta es
+                        inmediata.
+
+                        Si ya sos cliente, y solicitás tu préstamo por home banking, la acreditación en tu cuenta es
+                        inmediata.
                     </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingFive">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#flush-collapseFive" aria-expanded="false"
-                                aria-controls="flush-collapseFive">
-                                ¿Qué requisitos tengo que cumplir para poder contratarlo?
-                            </button>
-                        </h2>
-                        <div id="flush-collapseFive" class="accordion-collapse collapse"
-                            aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Los únicos requisitos que tenés que cumplir son:
-
-                                Ser mayor de 18 años
-                                Tener residencia permanente en Argentina
-                                Ser titular de una cuenta en el Banco Itaú, donde podamos depositarte tu préstamo.
-                                En caso de no ser titular de una cuenta en el Banco Itaú, podes solicitarla acá.
-
-                                Recordá que la solicitud del producto se encontrará sujeta a una evaluación crediticia.
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingSix">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseSix" aria-expanded="false"
-                                    aria-controls="flush-collapseSix">
-                                    ¿Puedo contratar un préstamo si no tengo un recibo de sueldo o constancia de
-                                    ingresos?
-                                </button>
-                            </h2>
-                            <div id="flush-collapseSix" class="accordion-collapse collapse"
-                                aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">Sí, es posible. Podés contactarnos de modo presencial en
-                                    cualquiera de nuestras sucursales.
-
-                                    Para consultar cuál es tu sucursal más cercana, hace click acá.
-
-                                    Si ya sos cliente, también podés contactarnos las 24hs al 0810-345-4999.
-                                </div>
-                            </div>
-                        </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFive">
+                    <button
+                        class="accordion-button collapsed text-white bg-secondary bg-gradient border border-2 border-dark mb-2"
+                        type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive"
+                        aria-expanded="false" aria-controls="flush-collapseFive">
+                        ¿Qué requisitos tengo que cumplir para poder contratarlo?
+                    </button>
+                </h2>
+                <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body shadow-lg p-3 mb-3 bg-body rounded">
+                        <ul>
+                            <li>Ser mayor de 18 años</li>
+                            <li>Tener residencia permanente en Argentina</li>
+                            <li>Ser titular de una cuenta en el Banco Itaú, donde podamos depositarte tu préstamo.</li>
+                        </ul>
+                        Recordá que la solicitud del producto se encontrará sujeta a una evaluación crediticia.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingSix">
+                    <button
+                        class="accordion-button collapsed text-white bg-secondary bg-gradient border border-2 border-dark mb-2"
+                        type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix"
+                        aria-expanded="false" aria-controls="flush-collapseSix">
+                        ¿Es necesario presentar algún documento adicional para contratar mi préstamo?
+                    </button>
+                </h2>
+                <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body shadow-lg p-3 mb-3 bg-body rounded">En caso de solicitarlo en persona, no
+                        va a ser necesario que presentes ningún documento adicional, sólo te vamos a pedir que muestres
+                        tu DNI para poder identificarte.
+                        Para una evaluación más precisa, te recomendamos que lleves una copia de tus últimos recibos de
+                        sueldo.
+                    </div>
+                </div>
+            </div>
     </section>
 
+
+    <!------- OPINIONES ------>
+    <div class="opiniones">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./images/2.jpg" class="d-block w-80 " alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>"Necesitaba un préstamo de manera urgente y lo conseguí en 5 minutos sin salir de mi casa."
+                        </h5>
+                        <p> Juan Pablo Hernandez.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/1.jpg" class="d-block w-80" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>" Estoy muy conforme con ThoraBank. Fue fácil y rápido."
+                        </h5>
+                        <p>Julieta De Sousa.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon cl-dark bg-primary" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon bg-primary" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
     <!------- GARANTIA -->
     <section>
         <div class="garantia">El mejor préstamo siempre, somos garantia de confianza</div>
@@ -218,16 +305,6 @@
 
     <!------ FOOTER  ------>
     <footer>
-        <div class="condiciones">
-            <p>El otorgamiento de los créditos se encuentra sujeto al cumplimiento de las condiciones de contratación,
-                verificación comercial y aprobación crediticia por parte de Credil S.R.L., Cuit 30-62221630-9. Calle 15
-                N° 1437 La Plata (C.P. 1900), Provincia de Buenos Aires. Este aviso no es una oferta, ni una invitación
-                de compra o adhesión, no tiene carácter de publicidad en los términos y los alcances establecidos en la
-                Ley N° 24240 (arts. 7 y 8). Las condiciones de contratación pueden ser consultadas en las sucursales de
-                time of pay S.R.L.
-                TIME OF PAY SRL / CUIT 30-62221630-9 / 15 Nº 1437 - LA PLATA</p>
-        </div>
-
         <div class="credito"> Desarrollado WEB by "Alegre Nicolás"
             <div class="redes"><a href="https://www.instagram.com/nicoalegre_/"><svg xmlns="http://www.w3.org/2000/svg"
                         width="16" height="16" fill="white" class="bi bi-instagram" viewBox="0 0 16 16">
