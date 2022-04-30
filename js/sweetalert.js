@@ -1,4 +1,5 @@
-/* (async () => {
+/*------ ALERT ------ */
+(async () => {
     const {value: nombre } = await Swal.fire({
         icon: 'question',
         title:'Ingresa tu Nombre y Apellido',
@@ -24,4 +25,4 @@
             icon: 'success',
         });
         } 
- })() */
+ })()
