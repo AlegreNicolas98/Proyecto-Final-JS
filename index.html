@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/main.css">
     <!-- Frameworks -->
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!-- Font Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +23,6 @@
 </head>
 
 <body>
-
     <!----- HEADER ----->
     <header class="header">
         <div>
@@ -30,34 +30,34 @@
                 <div class="logo animate__animated animate__flash">Thora Bank</div>
                 <ul class="menu visible">
                     <li><a href="./index.html">Home</a></li>
-                    <li><a href="./pages/prestamos.html">Solicita Tu Prestamo</a></li>
-                    <li><a href="./pages/nosotros.html">Por Qué ThoraBank</a></li>
-                    <li><a href="./pages/contacto.html">Testimonios</a></li>
+                    <li><a href="#simulador">Solicita Tu Prestamo</a></li>
+                    <li><a href="#requisitos">Preguntas Frecuentes</a></li>
+                    <li><a href="#opiniones">Testimonios</a></li>
                 </ul>
             </nav>
         </div>
         <div>
     </header>
 
-    <section>
+    <section class="portada">
         <div id="carouselExampleInterval" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="3000">
                     <img src="./images/pesoarg.png" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption d-none d-md-block animate__animated animate__zoomIn">
                         <h5>Elige cuánto necesitas y cuándo quieres devolverlo.</h5>
                     </div>
                 </div>
                 <div class="carousel-item" data-bs-interval="4000">
-                    <img src="./images/dolar.png" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
+                    <img src="./images/apreton.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block animate__animated animate__fadeInDown">
                         <h5>Conoce cuánto pagarás cada mes por tu Préstamo Personal.</h5>
                     </div>
                 </div>
                 <div class="carousel-item" data-bs-interval="5000">
                     <img src="./images/moneda.png" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Además, descubre si tu crédito está preautorizado.</h5>
+                    <div class="carousel-caption d-none d-md-block animate__animated animate__fadeInRight">
+                        <h5>Descubre si tu crédito está preautorizado.</h5>
                     </div>
                 </div>
             </div>
@@ -72,7 +72,7 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-    </div>
+        </div>
     </section>
 
     <!-- PRESETACION -->
@@ -97,28 +97,34 @@
 
     <!-- SIMULADOR -->
 
-    <section class="tit_simu">
+    <section id="simulador" class="tit_simu">
         <div>
             <h1>Simulador de Credito</h1>
         </div>
     </section>
     <Section class="simulador">
         <div class="form">
+            <h2>Calculá Tu Prestamo</h2>
             <form>
-                <div class="subtitulo"> <label for="nombre">Nombre y Apellido</label>
-                    <input type="text" id="nombre" class="formstyle" placeholder="Ingrese su nombre">
+                <div class="subtitulo"> <label for="nombre"></label>
+                    <input type="text" id="nombre" class="formstyle" placeholder="Por favor,ingrese su nombre.">
                 </div>
-                <div class="subtitulo"> <label for="correo">Correo Electronico</label>
-                    <input type="email" id="correo" class="formstyle" placeholder="Ingrese su email">
+                <div class="subtitulo"> <label for="correo"></label>
+                    <input type="email" name="correo" id="correo" class="formstyle" placeholder="Por favor,ingrese su email.">
                 </div>
-                <div class="subtitulo"> <label for="pedido">Dinero que desea pedir prestado</label>
-                    <input type="number" id="prestamo" class="formstyle" placeholder="Ingrese su monto solicitado">
+                <div class="subtitulo"> <label for="pedido"></label>
+                    <input type="number" id="prestamo" class="formstyle"
+                        placeholder="Ingrese su monto del prestamo solicitado.">
                 </div>
-                <div class="subtitulo"> <label for="duracion">Tiempo de duracion del prestamo </label>
-                    <input type="text" id="duracion" class="formstyle" placeholder="Ingrese su duracion">
+                <div class="subtitulo"> <label for="pedido"></label>
+                    <input type="number" id="porcentaje" class="formstyle"
+                        placeholder="Ingrese el porcentaje de interes dispuesto a pagar.">
+                </div>
+                <div class="subtitulo"> <label for="duracion"></label>
+                    <input type="text" id="duracion" class="formstyle" placeholder="Ingresa cuantos años quiere pagar.">
                 </div>
                 <div class="subtitulo">
-                    <button id="boton" class="form-boton" type="reset" onclick="capturar();"> Agregar</button>
+                    <button id="boton" class="formboton" type="reset" onclick="capturar();"> Agregar</button>
                 </div>
             </form>
         </div>
@@ -128,8 +134,9 @@
                     <tr>
                         <th scope="col">Nombre</th>
                         <th scope="col">Prestamo</th>
-                        <th scope="col">Duracion</th>
-                        <th scope="col">Devolucion</th>
+                        <th scope="col">Interes</th>
+                        <th scope="col">Pago Mensual</th>
+                        <th scope="col">Pago total</th>
                     </tr>
                 </thead>
             </table>
@@ -138,7 +145,7 @@
 
     <!----- REQUISITOS ------>
 
-    <div class="preguntas">
+    <div id="requisitos" class="preguntas">
         <h2>Preguntas Frecuentes</h2>
     </div>
     <section class="requisitos">
@@ -146,7 +153,7 @@
             <div class="accordion-item">
                 <h2 class="accordion-header " id="flush-headingOne">
                     <button
-                        class="accordion-button collapsed text-white bg-secondary bg-gradient border border-2 border-dark mb-2 "
+                        class="accordion-button collapsed text-warning bg-secondary bg-gradient border border-2 border-dark mb-2 "
                         type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
                         aria-expanded="false" aria-controls="flush-collapseOne">
                         ¿Cómo es un Préstamo Tradicional?
@@ -163,7 +170,7 @@
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingTwo">
                     <button
-                        class="accordion-button collapsed text-white bg-secondary bg-gradient border border-2 border-dark mb-2"
+                        class="accordion-button collapsed text-warning bg-secondary bg-gradient border border-2 border-dark mb-2"
                         type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
                         aria-expanded="false" aria-controls="flush-collapseTwo">
                         ¿Qué significa UVA y cómo es un Préstamo UVA?
@@ -182,7 +189,7 @@
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingThree">
                     <button
-                        class="accordion-button collapsed text-white bg-secondary bg-gradient border border-2 border-dark mb-2"
+                        class="accordion-button collapsed text-warning bg-secondary bg-gradient border border-2 border-dark mb-2"
                         type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
                         aria-expanded="false" aria-controls="flush-collapseThree">
                         ¿Cómo hago para contratar un préstamo?
@@ -201,7 +208,7 @@
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingFour">
                     <button
-                        class="accordion-button collapsed text-white bg-secondary bg-gradient border border-2 border-dark mb-2"
+                        class="accordion-button collapsed text-warning bg-secondary bg-gradient border border-2 border-dark mb-2"
                         type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour"
                         aria-expanded="false" aria-controls="flush-collapseFour">
                         ¿Cuánto tiempo tengo que esperar para recibir mi préstamo?
@@ -224,7 +231,7 @@
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingFive">
                     <button
-                        class="accordion-button collapsed text-white bg-secondary bg-gradient border border-2 border-dark mb-2"
+                        class="accordion-button collapsed text-warning bg-secondary bg-gradient border border-2 border-dark mb-2"
                         type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive"
                         aria-expanded="false" aria-controls="flush-collapseFive">
                         ¿Qué requisitos tengo que cumplir para poder contratarlo?
@@ -245,7 +252,7 @@
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingSix">
                     <button
-                        class="accordion-button collapsed text-white bg-secondary bg-gradient border border-2 border-dark mb-2"
+                        class="accordion-button collapsed text-warning bg-secondary bg-gradient border border-2 border-dark mb-2"
                         type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix"
                         aria-expanded="false" aria-controls="flush-collapseSix">
                         ¿Es necesario presentar algún documento adicional para contratar mi préstamo?
@@ -265,7 +272,7 @@
 
 
     <!------- OPINIONES ------>
-    <div class="opiniones">
+    <div id="opiniones" class="opiniones">
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -324,11 +331,15 @@
                     </svg></a> </div>
         </div>
     </footer>
-    <script src="./index.js"></script>
+
+    <!------ CDN ------>
+    <script src="./js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
         crossorigin="anonymous"></script>
     <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/sweetalert.js"></script>
 </body>
 
 </html>
