@@ -1,66 +1,67 @@
 /* ------ CICLOS Y ARRAY ------- */
+
 function capturar () { 
-   function clientes (nombre, prestamo, tiempo, correo,porcentaje,edad){
-        this.nombre = nombre.toUpperCase();
+   function clientes (prestamo, tiempo,porcentaje,edad){
         this.prestamo = parseFloat (prestamo);
         this.tiempo = tiempo;
-        this.correo = correo;
         this.porcentaje = parseFloat(porcentaje);
         this.edad = edad;
-
     }
-    let nombreCapturado = document.getElementById("nombre").value;
     let prestamoCapturado = document.getElementById("prestamo").value;
     let tiempoCapturado = document.getElementById("duracion").value;
-    let correoCapturado = document.getElementById("correo").value;
     let porcentajeCapturado = document.getElementById("porcentaje").value;
     let edadCapturado = document.getElementById("edad").value;
 
-    nuevoCliente = new clientes (nombreCapturado, prestamoCapturado, tiempoCapturado, correoCapturado, porcentajeCapturado, edadCapturado);
+    nuevoCliente = new clientes (prestamoCapturado, tiempoCapturado, porcentajeCapturado, edadCapturado);
     console.log(nuevoCliente);
 
     agregar();
+   
+    /*---------- JSON & STORAGE --------- */
+    let nom = document.getElementById("nombre").value;
+    let apel = document.getElementById("apellido").value;
+    let email = document.getElementById("email").value;
+     
+    localStorage.setItem("Nombre", nom.toUpperCase() );
+    localStorage.setItem("Apellido", apel.toUpperCase());
+    localStorage.setItem("Email",email);
+    localStorage.setItem("Edad",JSON.stringify(edadCapturado));
+    
+    console.log(localStorage.getItem('Nombre'));
+    console.log(localStorage.getItem('Apellido'));
+    console.log(localStorage.getItem('Email'));
+    console.log(localStorage.getItem('Edad'));
+
+    const sesionGuardar = (clave,valor) =>  {sessionStorage.setItem(clave,valor)};
+    sesionGuardar("Presupuesto",JSON.stringify(prestamoCapturado));
+    sesionGuardar("Duracion",JSON.stringify(tiempoCapturado));
+    sesionGuardar("Porcentaje",JSON.stringify(porcentajeCapturado));
 }
 
 /*------- FUNCIONES Y DOM --------  */
-let baseDatos = [];
+const baseDatos = [];
 function agregar (){
     resultado = ((nuevoCliente.prestamo * nuevoCliente.porcentaje)/100);
     pagoTotal = (nuevoCliente.prestamo + resultado);
     pagoMensual= (pagoTotal / (nuevoCliente.tiempo * 12));
-    baseDatos.push (nuevoCliente);
     console.log(baseDatos);
-    document.getElementById("table").innerHTML +='<tbody><td>'+ nuevoCliente.nombre + '</td><td>' + nuevoCliente.prestamo + '</td><td>' + resultado + '</td><td>'  + parseFloat(pagoMensual) + '</td><td>' + pagoTotal + '</td></tbody>';
+    document.getElementById("table").innerHTML +='<tbody><td>'+ nuevoCliente.prestamo + '</td><td>' + resultado + '</td><td>'  + parseFloat(pagoMensual) + '</td><td>' + pagoTotal + '</td></tbody>';
+    baseDatos.push (nuevoCliente);
+
+    console.log(baseDatos);
+
+    let cliente1 = baseDatos.filter ((el) => el.prestamoCapturado > 45000);
+    let cliente2 = baseDatos.find ((el) => el.tiempoCapturado == "4"); 
+    console.log(cliente1);
+    console.log(cliente2);
+
+    localStorage.setItem("Deuda Total",pagoTotal);
 };
 
-console.log(baseDatos);
+localStorage.clear();
+sessionStorage.clear();
 
-const cliente1 = baseDatos.filter ((el) => el.prestamoCapturado > 45000);
-const cliente2 = baseDatos.find ((el) => el.tiempoCapturado == "4"); 
-console.log(cliente1);
-console.log(cliente2);
-
-const usuariosMail = baseDatos.map((el) => el.correoCapturado);
-console.log(usuariosMail);
-
-const morosos = baseDatos.map ((el) => el.nombreCapturado);
-console.log(morosos);
-
-/*---------- JSON & STORAGE --------- */
-let usuario = localStorage.setItem("nombre", nombre);
-usuario = localStorage.setItem("apellido", apellido);
-console.log(usuario);
-
-let correo = localStorage.setItem("correo",usuariosMail);
-
-const guardarSesion = (clave, valor) => { sessionStorage.setItem(clave, valor)}; 
-guardarSesion("infoCliente", JSON.stringify(morosos));
-guardarSesion ("prestamos", JSON.stringify(cliente1));
-guardarSesion ("duracion", JSON.stringify(cliente2));
-
-console.log(guardarSesion);
-console.log(correo);
 
 /* -------- OPERADORES AVANZADOS ------- */
-edadCapturado > 18 ? alert ("Está habilidado para tener un prestado") : alert("Es menor de edad para un prestamo"); 
-tiempoCapturado < 5 ? alert ("Tendrá una reducción de intereses") : alert ("No tendrá beneficios");
+baseDatos.edadCapturado > 18 ? console.log ("Está habilidado para tener un prestado") : console.log("Es menor de edad para un prestamo"); 
+baseDatos.tiempoCapturado < 5 ? console.log("Tendrá una reducción de intereses") : console.log("No tendrá beneficios");
