@@ -22,10 +22,11 @@ function capturar () {
     let apel = document.getElementById("apellido").value;
     let email = document.getElementById("email").value;
      
-    localStorage.setItem("Nombre", nom.toUpperCase() );
-    localStorage.setItem("Apellido", apel.toUpperCase());
-    localStorage.setItem("Email",email);
-    localStorage.setItem("Edad",JSON.stringify(edadCapturado));
+    const localGuardar = (clave,valor) =>  {localStorage.setItem(clave,valor)};
+    localGuardar("Nombre", nom.toUpperCase() );
+    localGuardar("Apellido", apel.toUpperCase());
+    localGuardar("Email",email);
+    localGuardar("Edad",edadCapturado);
     
     console.log(localStorage.getItem('Nombre'));
     console.log(localStorage.getItem('Apellido'));
@@ -33,9 +34,9 @@ function capturar () {
     console.log(localStorage.getItem('Edad'));
 
     const sesionGuardar = (clave,valor) =>  {sessionStorage.setItem(clave,valor)};
-    sesionGuardar("Presupuesto",JSON.stringify(prestamoCapturado));
-    sesionGuardar("Duracion",JSON.stringify(tiempoCapturado));
-    sesionGuardar("Porcentaje",JSON.stringify(porcentajeCapturado));
+    sesionGuardar("Presupuesto",prestamoCapturado);
+    sesionGuardar("Duracion",tiempoCapturado);
+    sesionGuardar("Porcentaje",porcentajeCapturado);
 }
 
 /*------- FUNCIONES Y DOM --------  */
