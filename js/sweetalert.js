@@ -16,7 +16,7 @@
     if(nombre){
         Swal.fire({
             title:'Bienvenido a ThoraBank',
-           text: nombre,
+            text: nombre,
             confirmButtonText: 'Gracias',
             backdrop: true , 
             timer: 3000 ,
@@ -24,5 +24,5 @@
             padding: '1rem',
             icon: 'success',
         });
-        } 
- })()
+        }
+ })() 

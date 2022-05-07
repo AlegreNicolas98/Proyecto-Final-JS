@@ -1,5 +1,4 @@
 /* ------ CICLOS Y ARRAY ------- */
-
 function capturar () { 
    function clientes (prestamo, tiempo,porcentaje,edad){
         this.prestamo = parseFloat (prestamo);
@@ -37,6 +36,10 @@ function capturar () {
     sesionGuardar("Presupuesto",prestamoCapturado);
     sesionGuardar("Duracion",tiempoCapturado);
     sesionGuardar("Porcentaje",porcentajeCapturado);
+
+    console.log(sessionStorage.getItem('Presupuesto'));
+    console.log(sessionStorage.getItem('Duracion'));
+    console.log(sessionStorage.getItem('Porcentaje'));
 }
 
 /*------- FUNCIONES Y DOM --------  */
@@ -59,10 +62,27 @@ function agregar (){
     localStorage.setItem("Deuda Total",pagoTotal);
 };
 
-localStorage.clear();
-sessionStorage.clear();
 
 
 /* -------- OPERADORES AVANZADOS ------- */
 baseDatos.edadCapturado > 18 ? console.log ("Está habilidado para tener un prestado") : console.log("Es menor de edad para un prestamo"); 
 baseDatos.tiempoCapturado < 5 ? console.log("Tendrá una reducción de intereses") : console.log("No tendrá beneficios");
+
+/* ------- PROMISE Y FETCH -------- */
+
+fetch ('https://api.emailjs.com/api/v1.0/email/send',{
+    method:'POST',
+    body: JSON.stringify({
+        nombre:localStorage.getItem('nombre'),
+        apellido:localStorage.getItem('apellido'),
+        id:"8",
+        deudaTotal:"12000",
+        email:localStorage.getItem('email')
+    }),
+    
+    headers:{
+        'Content-type': 'application/json;charset-UTF-8'
+    },
+})
+.then ((response) => response.json())
+.then ((data) => console.log(data))
