@@ -1,4 +1,10 @@
-/* ------ CICLOS Y ARRAY ------- */
+const localGuardar = (clave,valor) =>  {localStorage.setItem(clave,valor)};
+const sesionGuardar = (clave,valor) =>  {sessionStorage.setItem(clave,valor)};
+
+    /* ------ CICLOS Y ARRAY ------- */
+    let btn = document.getElementById("btn");
+    btn.addEventListener("click",capturar);
+
 function capturar () { 
    function clientes (prestamo, tiempo,porcentaje,edad){
         this.prestamo = parseFloat (prestamo);
@@ -21,30 +27,23 @@ function capturar () {
     let apel = document.getElementById("apellido").value;
     let email = document.getElementById("email").value;
      
-    const localGuardar = (clave,valor) =>  {localStorage.setItem(clave,valor)};
-    localGuardar("Nombre", nom.toUpperCase() );
-    localGuardar("Apellido", apel.toUpperCase());
-    localGuardar("Email",email);
-    localGuardar("Edad",edadCapturado);
+    localGuardar("nombre", nom.toUpperCase() );
+    localGuardar("apellido", apel.toUpperCase());
+    localGuardar("email",email);
+    localGuardar("edad",edadCapturado);
+
     
-    console.log(localStorage.getItem('Nombre'));
-    console.log(localStorage.getItem('Apellido'));
-    console.log(localStorage.getItem('Email'));
-    console.log(localStorage.getItem('Edad'));
-
-    const sesionGuardar = (clave,valor) =>  {sessionStorage.setItem(clave,valor)};
-    sesionGuardar("Presupuesto",prestamoCapturado);
-    sesionGuardar("Duracion",tiempoCapturado);
-    sesionGuardar("Porcentaje",porcentajeCapturado);
-
-    console.log(sessionStorage.getItem('Presupuesto'));
-    console.log(sessionStorage.getItem('Duracion'));
-    console.log(sessionStorage.getItem('Porcentaje'));
+    sesionGuardar("presupuesto",prestamoCapturado);
+    sesionGuardar("duracion",tiempoCapturado);
+    sesionGuardar("porcentaje",porcentajeCapturado);
 }
 
-/*------- FUNCIONES Y DOM --------  */
+       /*------- FUNCIONES Y DOM --------  */
+ let num = 1;
+
 const baseDatos = [];
 function agregar (){
+
     resultado = ((nuevoCliente.prestamo * nuevoCliente.porcentaje)/100);
     pagoTotal = (nuevoCliente.prestamo + resultado);
     pagoMensual= (pagoTotal / (nuevoCliente.tiempo * 12));
@@ -59,30 +58,29 @@ function agregar (){
     console.log(cliente1);
     console.log(cliente2);
 
-    localStorage.setItem("Deuda Total",pagoTotal);
+    localGuardar("deudaMensual",pagoMensual);
+    localGuardar("deudaTotal",pagoTotal);
+
+
+    localStorage.clear();
+      /* ------- PROMISE Y FETCH -------- */
+
+      fetch ('https://reqres.in/api/users',{
+        method:'POST',
+        body: JSON.stringify({
+            userId:num++,
+            nombre :"nicolas",
+            apellido:"alegre",
+            email:"nicolasalegre4@gmail.com",
+        }),
+        
+        headers:{
+            'Content-type': 'application/json; charset=UTF-8'
+        },
+    })
+    .then ((response) => response.json())
+    .then ((data) => console.log(data)) 
+
 };
 
 
-
-/* -------- OPERADORES AVANZADOS ------- */
-baseDatos.edadCapturado > 18 ? console.log ("Está habilidado para tener un prestado") : console.log("Es menor de edad para un prestamo"); 
-baseDatos.tiempoCapturado < 5 ? console.log("Tendrá una reducción de intereses") : console.log("No tendrá beneficios");
-
-/* ------- PROMISE Y FETCH -------- */
-
-fetch ('https://api.emailjs.com/api/v1.0/email/send',{
-    method:'POST',
-    body: JSON.stringify({
-        nombre:localStorage.getItem('nombre'),
-        apellido:localStorage.getItem('apellido'),
-        id:"8",
-        deudaTotal:"12000",
-        email:localStorage.getItem('email')
-    }),
-    
-    headers:{
-        'Content-type': 'application/json;charset-UTF-8'
-    },
-})
-.then ((response) => response.json())
-.then ((data) => console.log(data))

@@ -117,7 +117,7 @@
                 </div>
                 <div class="subtitulo"> <label for="email"></label>
                     <input type="email" name="email" id="email" class="formstyle"
-                        placeholder="Por favor,ingrese su email.">
+                        placeholder="Por favor,ingrese su email." required>
                 </div>
                 <div class="subtitulo"> <label for="pedido"></label>
                     <input type="number" id="prestamo" class="formstyle"
@@ -134,7 +134,7 @@
                         placeholder="Ingresa cuantos años quiere pagar.">
                 </div>
                 <div class="subtitulo">
-                    <button id="boton" class="formboton" type="reset" onclick="capturar();"> Calcular Prestamo</button>
+                    <button id="btn" class="boton" type="reset"> Calcular Prestamo</button>
                 </div>
             </form>
         </div>
@@ -146,7 +146,9 @@
                         <th scope="col">Interes</th>
                         <th scope="col">Pago Mensual</th>
                         <th scope="col">Pago total</th>
+                  
                     </tr>
+                  
                 </thead>
             </table>
         </div>
@@ -279,7 +281,6 @@
             </div>
     </section>
 
-
     <!------- OPINIONES ------>
     <div id="opiniones" class="opiniones">
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -318,6 +319,9 @@
         <div class="garantia">El mejor préstamo siempre, somos garantia de confianza</div>
     </section>
 
+    <section>
+        <ul id="listado"></ul>
+    </section>
 
     <!------ FOOTER  ------>
     <footer>
@@ -342,6 +346,7 @@
     </footer>
 
     <!------ CDN ------>
+   
     <script src="./js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
