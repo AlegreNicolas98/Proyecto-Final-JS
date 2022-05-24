@@ -63,6 +63,7 @@ function agregar (){
 
 
     localStorage.clear();
+    
       /* ------- PROMISE Y FETCH -------- */
 
       fetch ('https://reqres.in/api/users',{
@@ -83,4 +84,22 @@ function agregar (){
 
 };
 
+/* const lista = document.querySelector('#listado');
 
+const pedirPosts = async () => {
+    const resp = await fetch('./data.json')
+    const data = await resp.json()
+   
+    data.forEach((data) => {
+        const li = document.createElement('li')
+        li.innerHTML = `
+        <h4>Moneda: ${data.monedaD}</h4>
+        <p>Cotizacion Actual: ${data.cotizacionDOficialCompra}</p>
+        <p>Cotizacion Actual: ${data.cotizacionDOficialVenta}</p>
+        <hr/>
+        `
+        lista.append(li)
+    })
+}
+
+pedirPosts() */

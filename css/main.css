@@ -1,6 +1,183 @@
 /* ABSTRACTS */
 /* VARIABLES */
 /* BASE */
+/* --------     PANTALLA GRANDE ------ */
+@media (max-width: 992px) {
+  body {
+    /* ------- FOOTER --------- */
+    /* ------------ PORTADA ----------- */
+    /*------- PRESENTACION --------- */
+    /* -------- SIMULADOR ------ */
+    /*----- OPINIONES  ------ */
+    /* ------- GARANTIA ---------*/
+  }
+  body header .nav .menu li {
+    font-size: 1em;
+  }
+  body header .logo {
+    font-size: 1.5em;
+    margin-top: 2.3rem;
+  }
+  body footer .condiciones p {
+    font-size: 0.55em;
+  }
+  body .portada h5 {
+    font-size: 3em;
+  }
+  body .contenido .contrato {
+    margin: 2rem;
+  }
+  body .contenido .contrato ol {
+    margin: 3rem 1rem;
+  }
+  body .contenido .contrato ol li {
+    padding: 0.5rem;
+  }
+  body .simulador .form h2 {
+    font-size: 3em;
+    padding: 1.2rem;
+  }
+  body .simulador .form .subtitulo {
+    font-size: 1em;
+  }
+  body .opiniones {
+    margin: 10% 0rem;
+  }
+  body .opiniones .slide img {
+    margin-left: 0%;
+  }
+  body .opiniones .slide h5 {
+    margin-left: 55%;
+    font-size: 1.3em;
+  }
+  body .opiniones .slide p {
+    margin-left: 55%;
+    font-size: 1.3em;
+  }
+  body .garantia {
+    font-size: 1.5em;
+  }
+}
+
+/* ---------    TABLET      ----------- */
+@media (max-width: 768px) {
+  body {
+    /* --------     FOOTER   --------- */
+    /* ------------ PORTADA ----------- */
+    /*------- PRESENTACION --------- */
+    /* --------     SIMULADOR    ------ */
+    /*--------- OPINIONES   --------- */
+    /* ------- GARANTIA ---------*/
+  }
+  body header .nav .menu li {
+    font-size: 0.8em;
+  }
+  body header .logo {
+    font-size: 1.2em;
+    margin-top: 2.5rem;
+  }
+  body footer .condiciones p {
+    font-size: 0.4em;
+  }
+  body .portada h5 {
+    font-size: 2em;
+  }
+  body .contenido .contrato {
+    margin: 2rem;
+  }
+  body .contenido .contrato img {
+    width: 50%;
+  }
+  body .contenido .contrato ol {
+    margin: 3rem 1rem;
+  }
+  body .contenido .contrato ol li {
+    padding: 0.5rem;
+  }
+  body .simulador .form h2 {
+    font-size: 3em;
+    padding: 1.2rem;
+  }
+  body .opiniones {
+    margin: 10% 0rem;
+  }
+  body .opiniones .slide img {
+    margin-left: 0%;
+  }
+  body .opiniones .slide h5 {
+    margin-left: 72%;
+    font-size: 1.1em;
+  }
+  body .opiniones .slide p {
+    margin-left: 77%;
+    font-size: 1.1em;
+    margin-bottom: 8rem;
+  }
+  body .garantia {
+    font-size: 1em;
+  }
+}
+
+/* ----------   CELULAR     ---------- */
+@media (max-width: 576px) {
+  body {
+    /* -------  FOOTER ------*/
+    /* ------------ PORTADA ----------- */
+    /*------- PRESENTACION --------- */
+    /* -------- SIMULADOR ------ */
+    /*----- OPINIONES  ------ */
+    /* ------- GARANTIA ---------*/
+  }
+  body header .nav .menu li {
+    font-size: 0.6em;
+  }
+  body header .logo {
+    font-size: 1em;
+    margin-top: 2.8rem;
+  }
+  body footer .condiciones p {
+    font-size: 0.3em;
+  }
+  body .portada h5 {
+    font-size: 2em;
+    margin-bottom: 10%;
+  }
+  body .contenido {
+    display: none;
+  }
+  body .contenido .contrato {
+    margin: 2rem;
+  }
+  body .contenido .contrato img {
+    width: 10%;
+  }
+  body .contenido .contrato ol {
+    margin: 3rem 1rem;
+  }
+  body .contenido .contrato ol li {
+    padding: 0.5rem;
+  }
+  body .simulador {
+    margin-left: 25%;
+  }
+  body .simulador .form h2 {
+    font-size: 3em;
+    padding: 1.2rem;
+  }
+  body .opiniones .slide h5 {
+    margin-left: 20%;
+    font-size: 1.1em;
+  }
+  body .opiniones .slide p {
+    margin-left: 20%;
+    font-size: 1.1em;
+    margin-bottom: 8rem;
+  }
+  body .garantia {
+    font-size: 0.8em;
+  }
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -78,7 +255,7 @@ header .nav .menu li {
 
 header .nav .menu li a {
   color: white;
-  text-shadow: 2px  3px black;
+  text-shadow: 2px  5px 3px black;
   font-style: italic;
   font-family: "PT Serif", serif;
   padding: 1rem;
@@ -140,6 +317,7 @@ header .logo {
 .tit_simu {
   font-family: "Merriweather", serif;
   font-size: 0.5rem;
+  margin: 1rem;
 }
 
 .simulador {
@@ -164,7 +342,7 @@ header .logo {
 
 .simulador .form .subtitulo {
   font-size: 1em;
-  margin: 0.9375rem;
+  margin: 0.9375em;
 }
 
 .simulador .form .formstyle {
@@ -218,7 +396,6 @@ header .logo {
 }
 
 .opiniones .slide p {
-  width: 50%;
   margin-left: 55%;
   margin-bottom: 15%;
   font-family: "Merriweather", serif;

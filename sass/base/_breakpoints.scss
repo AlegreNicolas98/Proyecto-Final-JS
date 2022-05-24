@@ -1,0 +1,226 @@
+/* --------     PANTALLA GRANDE ------ */
+@media(max-width:992px){
+    body{
+        header {
+                .nav {
+                  .menu {
+                   li {
+                      font-size: 1em;
+                   }} }
+                .logo{
+                  font-size: 1.5em;
+                  margin-top: 2.3rem;
+              }
+    }
+
+    /* ------- FOOTER --------- */
+    footer{
+    .condiciones{
+       p{
+        font-size: 0.55em;
+       }} 
+    }
+
+       
+    /* ------------ PORTADA ----------- */
+    .portada{
+    h5{
+      font-size: 3em;
+    }
+    }
+
+
+    /*------- PRESENTACION --------- */
+    .contenido{
+    .contrato{
+            margin: 2rem;
+        ol{
+            margin: 3rem 1rem ;
+          li{
+            padding: 0.5rem;
+          }
+        }
+      }
+    }
+
+    /* -------- SIMULADOR ------ */
+
+    .simulador{
+    .form{
+        h2{
+        font-size: 3em;
+        padding: 1.2rem;
+        } 
+        .subtitulo{
+        font-size: 1em;
+        }
+    }}
+
+    /*----- OPINIONES  ------ */
+    .opiniones{
+    margin: 10% 0rem;
+        .slide{
+        img{
+        margin-left: 0%;
+        }
+        h5{
+        margin-left: 55%;
+        font-size: 1.3em;
+        }
+        p{
+        margin-left: 55%;
+        font-size: 1.3em;
+        }
+    }}
+
+    /* ------- GARANTIA ---------*/
+    .garantia{
+        font-size: 1.5em;
+    }
+
+    }
+}
+
+/* ---------    TABLET      ----------- */
+@media(max-width:768px){
+    body{
+    header {
+       .nav {
+       .menu {
+        li {
+         font-size: 0.8em;
+    }}}
+        .logo{
+        font-size: 1.2em;
+         margin-top: 2.5rem;}
+    }
+
+        
+    /* --------     FOOTER   --------- */
+    footer{
+    .condiciones{
+       p{
+        font-size: 0.4em;
+       }} 
+    }
+
+       
+    /* ------------ PORTADA ----------- */
+    .portada{
+    h5{
+      font-size: 2em;
+    }
+    }
+
+
+    /*------- PRESENTACION --------- */
+    .contenido{
+    .contrato{
+        margin: 2rem;
+        img{
+        width: 50%;
+        }
+        ol{
+        margin: 3rem 1rem ;
+          li{
+            padding: 0.5rem;
+          }
+      }}}
+
+    /* --------     SIMULADOR    ------ */
+
+    .simulador{
+    .form{
+    h2{
+        font-size: 3em;
+        padding: 1.2rem;
+    }}}
+
+    /*--------- OPINIONES   --------- */
+    .opiniones{
+    margin: 10% 0rem;
+    .slide{
+    img{
+        margin-left: 0%;
+    }
+    h5{
+        margin-left: 72%;
+        font-size: 1.1em;
+    }
+    p{
+        margin-left: 77%;
+        font-size: 1.1em;
+        margin-bottom: 8rem;
+    }}}   
+
+    /* ------- GARANTIA ---------*/
+    .garantia{
+    font-size: 1em;
+    }
+ }
+}
+
+/* ----------   CELULAR     ---------- */
+ @media (max-width:576px){ body{
+    header {
+    .nav {
+    .menu {
+        li {
+        font-size: 0.6em;}}}
+        .logo{
+        font-size: 1em;
+        margin-top: 2.8rem;
+    }}
+
+    
+    /* -------  FOOTER ------*/
+    footer{
+    .condiciones{
+        p{
+        font-size: 0.3em;}}}
+
+   
+    /* ------------ PORTADA ----------- */
+    .portada{
+    h5{
+      font-size: 2em;
+      margin-bottom: 10%;}}
+
+
+    /*------- PRESENTACION --------- */
+    .contenido{
+      display: none;
+    .contrato{
+      margin: 2rem;
+    img{
+        width: 10%;}
+    ol{
+      margin: 3rem 1rem ;
+      li{
+          padding: 0.5rem;}}
+  }}
+
+    /* -------- SIMULADOR ------ */
+    .simulador{
+    margin-left: 25%;
+    .form{
+    h2{
+    font-size: 3em;
+    padding: 1.2rem;}}}
+
+    /*----- OPINIONES  ------ */
+    .opiniones{
+    .slide{
+    h5{
+    margin-left: 20%;
+    font-size: 1.1em;}
+    p{
+    margin-left: 20%;
+    font-size: 1.1em;
+    margin-bottom: 8rem;}}}
+
+    /* ------- GARANTIA ---------*/
+    .garantia{
+    font-size: 0.8em;}
+ }
+}
