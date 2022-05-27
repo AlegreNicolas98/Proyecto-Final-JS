@@ -102,7 +102,7 @@
             <h1>Simulador de Credito</h1>
         </div>
     </section>
-    <Section class="simulador">
+    <section class="simulador">
         <div class="form">
             <h2>Calculá Tu Prestamo</h2>
             <form>
@@ -134,25 +134,24 @@
                         placeholder="Ingresa cuantos años quiere pagar.">
                 </div>
                 <div class="subtitulo">
-                    <button id="btnPrestamo" class="boton" type="reset"> Calcular Prestamo</button>
+                    <button id="btn" class="btncalcular" type="reset"> Calcular Prestamo</button>
                 </div>
             </form>
         </div>
         <div>
-            <table class="table table-dark table-striped" id="table">
+            <table class="table table-info table-striped table-hover " id="table">
                 <thead>
                     <tr>
                         <th scope="col">Prestamo</th>
                         <th scope="col">Interes</th>
                         <th scope="col">Pago Mensual</th>
                         <th scope="col">Pago total</th>
-                  
                     </tr>
-                  
+                    <tr></tr>
                 </thead>
             </table>
         </div>
-    </Section>
+    </section>
 
     <!----- REQUISITOS ------>
 
@@ -315,12 +314,13 @@
         </div>
     </div>
     <!------- GARANTIA -->
+    
     <section>
-        <div class="garantia">El mejor préstamo siempre, somos garantia de confianza</div>
+        <ul id="listado"></ul>
     </section>
 
     <section>
-        <ul id="listado"></ul>
+        <div class="garantia">El mejor préstamo siempre, somos garantia de confianza</div>
     </section>
 
     <!------ FOOTER  ------>

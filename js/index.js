@@ -36,6 +36,45 @@ function capturar () {
     sesionGuardar("presupuesto",prestamoCapturado);
     sesionGuardar("duracion",tiempoCapturado);
     sesionGuardar("porcentaje",porcentajeCapturado);
+
+    /* -------- ALERTA DE COTIZACION ------- */
+
+    setTimeout(() => {
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+              confirmButton: 'btn btn-success',
+              cancelButton: 'btn btn-danger'
+            },
+            buttonsStyling: false
+          })
+          
+          swalWithBootstrapButtons.fire({
+            title: 'COTIZACION',
+            text: "Desea que le enviemos un mail con la informacion",
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonText: 'Si, porfavor!',
+            cancelButtonText: 'No, gracias!',
+            reverseButtons: true
+          }).then((result) => {
+            if (result.isConfirmed) {
+              swalWithBootstrapButtons.fire(
+                'Enviado!',
+                '¡Listo! en breve recibiras un mail.' ,
+                'success'
+              )
+            } else if (
+              /* Read more about handling dismissals below */
+              result.dismiss === Swal.DismissReason.cancel
+            ) {
+              swalWithBootstrapButtons.fire(
+                'Cancelado',
+                'Gracias por usar nuestro servicio de cotizacion!',
+                'error'
+              )
+            }
+          }) 
+    }, 3000);
 }
 
        /*------- FUNCIONES Y DOM --------  */
@@ -84,27 +123,6 @@ function agregar (){
 
 };
 
-/* const lista = document.querySelector('#listado');
-
-const pedirPosts = async () => {
-    const resp = await fetch('./data.json')
-    const data = await resp.json()
-   
-    data.forEach((data) => {
-        const li = document.createElement('li')
-        li.innerHTML = `
-        <h4>Moneda: ${data.monedaD}</h4>
-        <p>Cotizacion Actual: ${data.cotizacionDOficialCompra}</p>
-        <p>Cotizacion Actual: ${data.cotizacionDOficialVenta}</p>
-        <hr/>
-        `
-        lista.append(li)
-    })
-}
-
-pedirPosts() */
-
-
 /* ----- EVENTOS ------ */
 let boton = document.getElementById("menu")
 boton.onmousedown = () =>{console.log("barra nav utilizada")};
@@ -123,10 +141,5 @@ let requisito2  = document.getElementById("requisito2");
 requisito1.onchange = () => {console.log("Preguntas Frecuentes")};
 requisito2.onchange = () => {console.log("Preguntas Frecuentes")}
 
-let miFormulario = document.getElementById("btnPrestamo");
-miFormulario.addEventListener("submit", validarFormulario);
-
-function validarFormulario(e){
-    e.preventDefault();
-    console.log("Prestamo Calculado");    
-}
+let prestamo1 = document.getElementById("prestamo");
+prestamo1.onkeydown = () => {console.log("KeyDown");}
