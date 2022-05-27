@@ -103,3 +103,30 @@ const pedirPosts = async () => {
 }
 
 pedirPosts() */
+
+
+/* ----- EVENTOS ------ */
+let boton = document.getElementById("menu")
+boton.onmousedown = () =>{console.log("barra nav utilizada")};
+
+let input1  = document.getElementById("nombre")
+input1.addEventListener('input', () => {console.log(input1.value)})
+
+let input2  = document.getElementById("apellido")
+input2.addEventListener('input', () => {console.log(input2.value)})
+
+let input3  = document.getElementById("email")
+input3.addEventListener('input', () => {console.log(input3.value)})
+
+let requisito1  = document.getElementById("requisito1");
+let requisito2  = document.getElementById("requisito2");
+requisito1.onchange = () => {console.log("Preguntas Frecuentes")};
+requisito2.onchange = () => {console.log("Preguntas Frecuentes")}
+
+let miFormulario = document.getElementById("btnPrestamo");
+miFormulario.addEventListener("submit", validarFormulario);
+
+function validarFormulario(e){
+    e.preventDefault();
+    console.log("Prestamo Calculado");    
+}

@@ -28,11 +28,11 @@
         <div>
             <nav class="nav">
                 <div class="logo animate__animated animate__flash">Thora Bank</div>
-                <ul class="menu visible">
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="#simulador">Solicita Tu Prestamo</a></li>
-                    <li><a href="#requisitos">Preguntas Frecuentes</a></li>
-                    <li><a href="#opiniones">Testimonios</a></li>
+                <ul class="menu visible" id="menu">
+                    <li ><a href="./index.html">Home</a></li>
+                    <li ><a href="#simulador">Solicita Tu Prestamo</a></li>
+                    <li ><a href="#requisitos">Preguntas Frecuentes</a></li>
+                    <li ><a href="#opiniones">Testimonios</a></li>
                 </ul>
             </nav>
         </div>
@@ -134,7 +134,7 @@
                         placeholder="Ingresa cuantos años quiere pagar.">
                 </div>
                 <div class="subtitulo">
-                    <button id="btn" class="boton" type="reset"> Calcular Prestamo</button>
+                    <button id="btnPrestamo" class="boton" type="reset"> Calcular Prestamo</button>
                 </div>
             </form>
         </div>
@@ -163,7 +163,7 @@
         <div class="accordion accordion-flush bg-primary w-75" id="accordionFlushExample">
             <div class="accordion-item">
                 <h2 class="accordion-header " id="flush-headingOne">
-                    <button
+                    <button id="requisito1"
                         class="accordion-button collapsed text-warning bg-secondary bg-gradient border border-2 border-dark mb-2 "
                         type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
                         aria-expanded="false" aria-controls="flush-collapseOne">
@@ -180,7 +180,7 @@
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingTwo">
-                    <button
+                    <button id="requisito2"
                         class="accordion-button collapsed text-warning bg-secondary bg-gradient border border-2 border-dark mb-2"
                         type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
                         aria-expanded="false" aria-controls="flush-collapseTwo">
@@ -199,7 +199,7 @@
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingThree">
-                    <button
+                    <button 
                         class="accordion-button collapsed text-warning bg-secondary bg-gradient border border-2 border-dark mb-2"
                         type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
                         aria-expanded="false" aria-controls="flush-collapseThree">
