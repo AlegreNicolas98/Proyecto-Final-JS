@@ -14,7 +14,7 @@ header {
             padding: 0.5rem;
           a {
             color: rgb(255, 255, 255);
-            text-shadow: 2px  5px 3px black;
+            
             font-style: italic;
             font-family: $font2;
             padding: 1rem;
@@ -22,12 +22,14 @@ header {
             &:hover{
               background-color: #1b80bb;
               transition: ease-in 0.5s;
-              text-shadow: none;
+              color: black;
+
             }
     
         }}} }
 
       .logo{
+        
         font-family: $font2;
         font-size: 2em;
         color: #ffffff;

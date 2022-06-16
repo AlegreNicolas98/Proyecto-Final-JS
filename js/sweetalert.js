@@ -1,5 +1,5 @@
 /*------ ALERT ------ */
-(async () => {
+/* (async () => {
   Swal.fire({
         icon: 'question',
         title: 'Ingresa tu Nombre y Apellido',
@@ -47,4 +47,4 @@
           })
         }
       })
- })() ;
+ })() ; */

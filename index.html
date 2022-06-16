@@ -29,7 +29,7 @@
             <nav class="nav">
                 <div class="logo animate__animated animate__flash">Thora Bank</div>
                 <ul class="menu visible" id="menu">
-                    <li ><a href="./index.html">Home</a></li>
+                    <li class="boton"><a href="./index.html">Home</a></li>
                     <li ><a href="#simulador">Solicita Tu Prestamo</a></li>
                     <li ><a href="#requisitos">Preguntas Frecuentes</a></li>
                     <li ><a href="#opiniones">Testimonios</a></li>
@@ -43,19 +43,19 @@
         <div id="carouselExampleInterval" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="3000">
-                    <img src="./images/pesoarg.png" class="d-block w-100" alt="...">
+                    <img src="./images/pesoarg.png" class="d-block w-100" alt="banco">
                     <div class="carousel-caption d-none d-md-block animate__animated animate__zoomIn">
                         <h5>Elige cuánto necesitas y cuándo quieres devolverlo.</h5>
                     </div>
                 </div>
                 <div class="carousel-item" data-bs-interval="4000">
-                    <img src="./images/apreton.png" class="d-block w-100" alt="...">
+                    <img src="./images/apreton.png" class="d-block w-100" alt="apreton">
                     <div class="carousel-caption d-none d-md-block animate__animated animate__fadeInDown">
                         <h5>Conoce cuánto pagarás cada mes por tu Préstamo Personal.</h5>
                     </div>
                 </div>
                 <div class="carousel-item" data-bs-interval="5000">
-                    <img src="./images/moneda.png" class="d-block w-100" alt="...">
+                    <img src="./images/moneda.png" class="d-block w-100" alt="prestamo">
                     <div class="carousel-caption d-none d-md-block animate__animated animate__fadeInRight">
                         <h5>Descubre si tu crédito está preautorizado.</h5>
                     </div>
@@ -78,16 +78,16 @@
     <!-- PRESETACION -->
     <section class="contenido">
         <div class="contrato">
-            <img src="./images/portada.jpg" alt="">
+            <img src="./images/portada.jpg" alt="acuerdo">
             <div>
-                <ol>
-                    <li>Para remodelar o equipar tu casa, emprender un negocio o lo que te propongas. ¡Concretá tu
+                <ol class="lista">
+                    <li class="tips" >Para remodelar o equipar tu casa, emprender un negocio o lo que te propongas. ¡Concretá tu
                         proyecto con la financiación más conveniente!
                     </li>
-                    <li> Comenzá a disfrutar de tu préstamo ahora y pagalo en hasta 96 cuotas. </li>
-                    <li> La solicitud es 100% online, y se acredita inmediatamente. Además, definís el monto y el plazo
+                    <li class="tips" > Comenzá a disfrutar de tu préstamo ahora y pagalo en hasta 96 cuotas. </li>
+                    <li class="tips"> La solicitud es 100% online, y se acredita inmediatamente. Además, definís el monto y el plazo
                         que más te convenga. </li>
-                    <li> Tenés la posibilidad de cancelarlo anticipadamente cuando quieras, en forma total o parcial.
+                    <li class="tips"> Tenés la posibilidad de cancelarlo anticipadamente cuando quieras, en forma total o parcial.
                     </li>
                 </ol>
             </div>
@@ -285,7 +285,7 @@
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="./images/2.jpg" class="d-block w-80 " alt="...">
+                    <img src="./images/2.jpg" class="d-block w-80 " alt="usuario">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>"Necesitaba un préstamo de manera urgente y lo conseguí en 5 minutos sin salir de mi casa."
                         </h5>
@@ -293,7 +293,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="./images/1.jpg" class="d-block w-80" alt="...">
+                    <img src="./images/1.jpg" class="d-block w-80" alt="cliente">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>" Estoy muy conforme con ThoraBank. Fue fácil y rápido."
                         </h5>
@@ -314,18 +314,13 @@
         </div>
     </div>
     <!------- GARANTIA -->
-    
-    <section>
-        <ul id="listado"></ul>
-    </section>
-
-    <section>
+    <section class="seccion">
         <div class="garantia">El mejor préstamo siempre, somos garantia de confianza</div>
     </section>
 
     <!------ FOOTER  ------>
     <footer>
-        <div class="credito"> Desarrollado WEB by "Alegre Nicolás"
+        <div class="credito"> Desarrollo Web por  "Alegre Nicolás"
             <div class="redes"><a href="https://www.instagram.com/nicoalegre_/"><svg xmlns="http://www.w3.org/2000/svg"
                         width="16" height="16" fill="white" class="bi bi-instagram" viewBox="0 0 16 16">
                         <path
@@ -346,7 +341,7 @@
     </footer>
 
     <!------ CDN ------>
-   
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"

@@ -143,3 +143,22 @@ requisito2.onchange = () => {console.log("Preguntas Frecuentes")}
 
 let prestamo1 = document.getElementById("prestamo");
 prestamo1.onkeydown = () => {console.log("KeyDown");}
+
+/* ------- JQUERY ------- */
+$(function(){
+  $(".tips").on({
+    mouseenter: function(){
+         $(this).css({"font-size": 16, "transition": "ease-in 0.35s" , "color": "white"});
+    },
+    mouseleave: function(){
+        $(this).css({"font-size": 14 ,"color": "#FF9800"});
+    },
+});
+
+$(".garantia").mouseenter(function(){
+  $(this).css({"background-color": " #1a374d","border-radius":"50px", "color":"white","font-size":"2.5em"});
+})
+$(".garantia").mouseleave(function(){
+  $(this).css({"background-color": "","border-radius":"none", "color":"black","font-size":"2em"});
+})
+})

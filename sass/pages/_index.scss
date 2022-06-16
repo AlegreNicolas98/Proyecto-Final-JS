@@ -11,20 +11,19 @@
 /*------- PRESENTACION --------- */
 .contenido{
     display: flex;
-    
     .contrato{
         display: flex;
         margin: 2rem;
         background-color: #757575;
-      ol{
+       ol{
           margin: 5rem 2rem ;
          list-style: none;
           text-align: justify;
           li{
-              font-style: italic;
-              font-family: $font;
-              padding: 0.5rem;
-              color: #FF9800;
+            font-style: italic;
+            font-family: $font;
+            margin: 1rem;
+            color: #FF9800;
           }
       }
       }
@@ -117,4 +116,5 @@
     font-family: $font;
     font-style: italic;
     font-weight: 900;
+    color: black;
 }

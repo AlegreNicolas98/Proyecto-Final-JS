@@ -214,7 +214,7 @@ footer .condiciones p {
 footer .credito {
   padding: 1rem;
   color: white;
-  background-color: #1A374D;
+  background-color: #1a374d;
   text-align: center;
 }
 
@@ -255,7 +255,6 @@ header .nav .menu li {
 
 header .nav .menu li a {
   color: white;
-  text-shadow: 2px  5px 3px black;
   font-style: italic;
   font-family: "PT Serif", serif;
   padding: 1rem;
@@ -266,7 +265,7 @@ header .nav .menu li a:hover {
   background-color: #1b80bb;
   -webkit-transition: ease-in 0.5s;
   transition: ease-in 0.5s;
-  text-shadow: none;
+  color: black;
 }
 
 header .logo {
@@ -309,7 +308,7 @@ header .logo {
 .contenido .contrato ol li {
   font-style: italic;
   font-family: "Merriweather", serif;
-  padding: 0.5rem;
+  margin: 1rem;
   color: #FF9800;
 }
 
@@ -410,5 +409,6 @@ header .logo {
   font-family: "Merriweather", serif;
   font-style: italic;
   font-weight: 900;
+  color: black;
 }
 /*# sourceMappingURL=main.css.map */
